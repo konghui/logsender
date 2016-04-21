@@ -1,0 +1,26 @@
+{
+	"monitor":[
+		{
+			"file":"/var/log/nginx/access.log",
+			"linehandler":"nginx",
+			"sendhandler":"redis",
+			"redis":{
+				"addr":"127.0.0.1:6379",
+				"password":"",
+				"DB":0,
+				"channel":"foo"
+			}
+		},
+		{
+			"file":"/tmp/111",
+			"linehandler":"raw", 
+			"sendhandler":"redis",
+			"redis":{
+				"addr":"127.0.0.1:6379", 
+				"password":"",
+				"DB":0,
+				"channel":"bar"
+			}
+		}
+	]
+}
